@@ -47,11 +47,17 @@ const NavLayout = () => {
             sx={{
               height: '3rem',
               width: '3rem',
-              borderRadius: '10px'
+              borderRadius: '50px'
             }}
             image="/images/profile.jpg"
           />
-          <Typography color='black' fontFamily='Open Sans, sans-serif'>
+          <Typography
+            color='black'
+            fontFamily='Open Sans, sans-serif'
+            fontWeight="700"
+            fontSize="1.2rem"
+            letterSpacing="1px"
+          >
             UTSAV KC
           </Typography>
         </Stack>
@@ -92,7 +98,7 @@ const NavLayout = () => {
             )
         }
       </Stack>
-    </Box>
+    </Box >
   );
 };
 
