@@ -57,43 +57,41 @@ const Projects = () => {
     return <>
         <Stack
             justifyContent='center'
-            sx={{
-                gap: {
-                    sm: '100px'
-                    , xs: '50px'
-                }
-            }}
+            sx={{ gap: { xs: '50px' } }}
         >
             <Typography
-                variant="h4"
-                color="black"
-                fontWeight='bolder'
+                color="black" fontWeight="300"
                 sx={{
-                    fontSize: {
-                        xs: '25px'
-                        , sm: '40px'
-                    }
-                    , textAlign: {
-                        sm: 'center'
-                        , xs: 'left'
-                    }
+                    fontSize: { xs: '30px', sm: '40px' }
+                    , textAlign: { sm: 'center', xs: 'left' }
                 }}
             >
-                PROJECTS
+                Projects
             </Typography>
             <Typography
-                variant='h5'
-                color='black'
+                color="black"
+                fontWeight="300"
                 sx={{
-                    ...fontSx
-                    , textAlign: 'center'
+                    fontSize: { xs: '30px', sm: '22px' },
+                    paddingX: { sm: '2rem' },
+                    paddingBottom: { sm: '2rem' },
+                    textAlign: { sm: 'center', xs: 'left' }
                 }}
             >
                 Here are some of the projects that i've worked on recently.
             </Typography>
             <Stack alignItems='center' gap='100px'>
                 {dataArray.map((value, index) => (
-                    <ProjectDescription key={index} {...value} />
+                    <Box
+                        key={index}
+                        sx={{
+                            display: 'flex',
+                            justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end',
+                            width: '100%',
+                        }}
+                    >
+                        <ProjectDescription {...value} />
+                    </Box>
                 ))}
             </Stack>
         </Stack>

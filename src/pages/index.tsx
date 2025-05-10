@@ -1,14 +1,15 @@
 import { Box, Paper, Stack, useMediaQuery, useTheme } from '@mui/material';
 import { Inter, Dancing_Script } from 'next/font/google';
 import NavLayout from '@/components/NavLayout/NavLayout';
-import Intro from './intro';
-import About from './about';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Work from './Work';
 import Projects from './projects';
+import Contact from './Contact';
+import Intro from './Intro';
+import About from './About';
 
 const dancingScript = Dancing_Script({ subsets: ['latin'] });
 const inter = Inter({ subsets: ['latin'] })
@@ -61,7 +62,6 @@ export default function Home() {
         sx={{
           display: 'flex',
           paddingX: '20px'
-          // backgroundColor: 'lightBlue'
           , height: '80px'
           , alignItems: 'center'
           , justifyContent: 'center'
@@ -91,8 +91,9 @@ export default function Home() {
       >
         <Intro />
         <About />
-        <Projects />
         <Work />
+        <Projects />
+        <Contact />
       </Stack>
     </Box >
   );

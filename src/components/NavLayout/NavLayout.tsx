@@ -65,8 +65,8 @@ const NavLayout = () => {
           !isMobile ? (
             <Stack direction='row' sx={{ fontFamily: 'Open Sans, sans-serif' }}>
               <Button sx={buttonFontSize}>Home</Button>
-              <Button sx={buttonFontSize}>Skill</Button>
-              <Button sx={buttonFontSize}>Experience</Button>
+              <Button sx={buttonFontSize}>About</Button>
+              <Button sx={buttonFontSize}>Work</Button>
               <Button sx={buttonFontSize}>Projects</Button>
               <Button sx={buttonFontSize}>Contact</Button>
               <FormGroup>

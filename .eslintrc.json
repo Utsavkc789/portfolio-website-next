@@ -1,40 +1,47 @@
 {
   "extends": [
-    "airbnb",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
-    "prettier/prettier": "error",
-    "react/jsx-first-prop-new-line": [
+    "indent": [
+      "error",
       2,
-      "multiline"
+      {
+        "SwitchCase": 1,
+        "ignoredNodes": [
+          "JSXElement *"
+        ]
+      }
     ],
-    "react/jsx-max-props-per-line": [
-      2,
-      { "maximum": 1, "when": "multiline" }
+    "react/jsx-indent": [
+      "error",
+      2
     ],
-    "react/jsx-indent-props": [2, 2],
-    "react/jsx-closing-bracket-location": [
-      2,
-      "tag-aligned"
+    "react/jsx-indent-props": [
+      "error",
+      2
     ],
     "object-curly-newline": [
       "error",
       {
-        "ObjectExpression": {
-          "multiline": true,
-          "minProperties": 2
-        }
+        "multiline": true,
+        "consistent": true
       }
     ],
-    "comma-spacing": [
+    "react/jsx-wrap-multilines": [
       "error",
       {
-        "before": false,
-        "after": true
+        "declaration": "parens-new-line",
+        "assignment": "parens-new-line",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "parens-new-line",
+        "logical": "parens-new-line",
+        "prop": "ignore"
       }
-    ],
-    "comma-dangle": ["error", "never"]
+    ]
   }
 }
